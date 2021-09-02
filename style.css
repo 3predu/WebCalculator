@@ -1,0 +1,65 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Azeret Mono', monospace;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right,  #002533, #0099cc);
+}
+
+/*Estilizando a div que engloba toda a calculadora*/
+.calculatorGrid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh; /*Colocando para preencher 100% da altura o tempo todo*/
+    grid-template-columns: repeat(4, 100px); /*Definindo as colunas (vão ter 4 colunas e 100px)*/
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px); /*Ajustando os n° dentro ta tela da calculadora
+    (vamos ter um valor mínimo de 120px de altura e deixamos no auto, para caber o nescessário dentro da tela da calculadora)
+    Definindo também as linhas (irá ter 5 linhas e 100px)*/
+    background:rgba(0, 0, 0, 0.75);
+}
+
+/*Estilizando os botões da calculadora*/
+.calculatorGrid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid rgb(255, 255, 255);
+    outline: none;
+    background-color: rgb(255, 255, 255, .75);
+}
+
+/*Adicionando hover em todos os botões da calculadora*/
+.calculatorGrid > button:hover{
+    background-color: rgb(245, 8, 8);
+}
+
+/*Fazendo os botões 'CE' e '=' ocuperem dois espaços*/
+.fillTwoSpaces{
+    grid-column: span 2;
+}
+
+/*estilizando o visor*/
+.calculatorOutput{
+    grid-column: 1 / -1; /*indo da 1° coluna para a última*/
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end; /*colocando os n° ao lado direito do container*/
+    justify-content: space-around; /*deixando os n° um pouco longe da borda do container e mais pertos um do outro*/
+    flex-direction: column; /*deixando os n° em uma coluna*/
+    padding: 10px;
+    word-wrap: break-word; /*usando a quebra auto de linha, para definir onde queremos que seja a quebra, no caso (no meio) */
+    word-break: break-all; /*quebrando todas as palavras/n°*/
+}
+
+.calculatorOutput .calculatorPreviusOperand{
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5em;
+}
+.calculatorOutput .calculatorCurrentOperand{
+    color: white;
+    font-size: 2.5em;
+}
