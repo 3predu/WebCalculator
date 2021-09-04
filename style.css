@@ -27,14 +27,14 @@ body {
 .calculatorGrid > button {
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid #181818;
     outline: none;
     background-color: rgb(255, 255, 255, .75);
 }
 
 /*Adicionando hover em todos os botões da calculadora*/
 .calculatorGrid > button:hover{
-    background-color: rgb(245, 8, 8);
+    background-color: rgb(228, 68, 5);
 }
 
 /*Fazendo os botões 'CE' e '=' ocuperem dois espaços*/
@@ -45,7 +45,7 @@ body {
 /*estilizando o visor*/
 .calculatorOutput{
     grid-column: 1 / -1; /*indo da 1° coluna para a última*/
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgb(74, 74, 74, .75);
     display: flex;
     align-items: flex-end; /*colocando os n° ao lado direito do container*/
     justify-content: space-around; /*deixando os n° um pouco longe da borda do container e mais pertos um do outro*/
