@@ -20,7 +20,6 @@ body {
     grid-template-rows: minmax(120px, auto) repeat(5, 100px); /*Ajustando os n° dentro ta tela da calculadora
     (vamos ter um valor mínimo de 120px de altura e deixamos no auto, para caber o nescessário dentro da tela da calculadora)
     Definindo também as linhas (irá ter 5 linhas e 100px)*/
-    background:rgba(0, 0, 0, 0.75);
 }
 
 /*Estilizando os botões da calculadora*/
@@ -28,13 +27,18 @@ body {
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid #181818;
+    border-radius: 20px;
     outline: none;
     background-color: rgb(255, 255, 255, .75);
 }
 
 /*Adicionando hover em todos os botões da calculadora*/
 .calculatorGrid > button:hover{
-    background-color: rgb(228, 68, 5);
+    background-color: rgb(59, 59, 59);
+}
+
+button.operator{
+    background: rgb(228, 68, 5);
 }
 
 /*Fazendo os botões 'CE' e '=' ocuperem dois espaços*/
@@ -53,6 +57,7 @@ body {
     padding: 10px;
     word-wrap: break-word; /*usando a quebra auto de linha, para definir onde queremos que seja a quebra, no caso (no meio) */
     word-break: break-all; /*quebrando todas as palavras/n°*/
+    border-radius: 20px;
 }
 
 .calculatorScreenOutput .screenPreviousOperand{
