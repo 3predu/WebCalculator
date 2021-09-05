@@ -43,7 +43,7 @@ body {
 }
 
 /*estilizando o visor*/
-.calculatorOutput{
+.calculatorScreenOutput{
     grid-column: 1 / -1; /*indo da 1° coluna para a última*/
     background-color: rgb(74, 74, 74, .75);
     display: flex;
@@ -55,11 +55,11 @@ body {
     word-break: break-all; /*quebrando todas as palavras/n°*/
 }
 
-.calculatorOutput .calculatorPreviusOperand{
+.calculatorScreenOutput .screenPreviousOperand{
     color: rgba(255, 255, 255, .75);
     font-size: 1.5em;
 }
-.calculatorOutput .calculatorCurrentOperand{
+.calculatorScreenOutput .screenCurrentOperand{
     color: white;
     font-size: 2.5em;
 }

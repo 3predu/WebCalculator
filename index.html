@@ -11,29 +11,34 @@
     <title>Calculator</title>
 </head>
 <body>
+    <!-- 
+        Usando atributos de dados em vez de classes, neste caso, pois
+        fica mais facilmente legível diferenciar quais partes o js 
+        está usando e quais o css não está usando.
+    -->
     <section class="calculatorGrid">
-        <div class="calculatorOutput">
-            <div class="calculatorPreviusOperand"></div>
-            <div class="calculatorCurrentOperand"></div>
+        <div class="calculatorScreenOutput">
+            <div data-previous class="screenPreviousOperand"></div>
+            <div data-current class="screenCurrentOperand"></div>
         </div>
-        <button class="fillTwoSpaces">CE</button>
-        <button>C</button>
-        <button>÷</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>x</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>+</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>-</button>
-        <button>.</button>
-        <button>0</button>
-        <button class="fillTwoSpaces">=</button>
+        <button data-button-clear-all class="fillTwoSpaces">AC</button>
+        <button data-button-delete>DEL</button>
+        <button data-operator>÷</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operator>x</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operator>+</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operator>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-button-equals class="fillTwoSpaces">=</button>
     </section>
     <script src="script.js"></script>
 </body>
